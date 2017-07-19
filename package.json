@@ -1,0 +1,44 @@
+{
+  "name": "redux-offline-immutable-config",
+  "version": "1.0.0",
+  "description": "Provide a configuration for redux-offline to use an immutable root state with redux-persist-immutable",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib --ignore **/__tests__/**",
+    "flow:start": "flow server",
+    "flow:stop": "flow stop",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "lint": "eslint src/",
+    "prepublish": "npm run lint && npm run flow && npm run test && npm run build",
+    "watch": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anyjunk/redux-offline-immutable-config.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janyjunk/redux-offline-immutable-config/issues"
+  },
+  "homepage": "https://github.com/anyjunk/redux-offline-immutable-config#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^4.2.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "flow-bin": "^0.50.0"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "redux-persist-immutable": "^4.3.0"
+  },
+  "peerDependencies": {
+    "redux-offline": ">=2"
+  }
+}
